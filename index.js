@@ -189,9 +189,10 @@ function renderTotal() {
 
 function putEverythingInTheCart(){
   let feelingGenerousEl = document.querySelector('.feeling-generous')
-  $(".feeling-generous").one('click', function(){
+  feelingGenerousEl.addEventListener('click', function (){
     for (let item of state.storeItems) {
-      item.inCart = item.stock
+      if(item.inCart = item.stock)
+      item.stock = 0
     }
     render()
   })
