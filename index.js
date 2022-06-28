@@ -186,10 +186,22 @@ function renderTotal() {
   totalEl.textContent = `£${total}`
 }
 
+function putEverythingInTheCart(){
+  let feelingGenerousEl = document.querySelector('.feeling-generous')
+  feelingGenerousEl.addEventListener('click', function(){
+    for (let item of state.storeItems) {
+      item.inCart = item.stock
+      item.stock = 0
+    }
+    render()
+  })
+}
+
 function render() {
   renderStoreItems()
   renderCartItems()
   renderTotal()
+  putEverythingInTheCart()
 }
 
 render()
