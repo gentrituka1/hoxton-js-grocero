@@ -195,7 +195,7 @@ function putEverythingInTheCart(){
       item.stock = 0
     }
     render()
-  })
+  }, {once: true})
 }
 
 function render() {
