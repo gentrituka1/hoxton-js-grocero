@@ -181,9 +181,9 @@ function getTotal() {
 }
 
 function renderTotal() {
-  let total = getTotal()
-  let totalEl = document.querySelector('.total')
-  totalEl.textContent = `Total: ${total}`
+  let total = getTotal().toFixed(2)
+  let totalEl = document.querySelector('.total-number')
+  totalEl.textContent = `£${total}`
 }
 
 function render() {
